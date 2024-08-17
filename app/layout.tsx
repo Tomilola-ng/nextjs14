@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={myFont.className}>
+      <body className={`${myFont.className} bg-slate-100 hide-scrollbar`}>
         <Header />
         {children}
         <Footer />

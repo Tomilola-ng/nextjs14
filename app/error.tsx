@@ -11,7 +11,7 @@ export default function GlobalError({
 }) {
   return (
     <html>
-      <body className="w-screen h-screen maxContainer pSm flexCenter gap-y-8 bg-slate-900">
+      <body className="w-dvw h-dvh maxContainer pSm flexCenter gap-y-8 bg-slate-900">
         <h2 className="font-bold text-2xl md:text-6xl text-white shadow-md shadow-slate-100">
           404!
         </h2>

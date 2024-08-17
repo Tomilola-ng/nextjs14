@@ -1,20 +1,37 @@
-import { _siteDetails } from "@/lib/config";
+"use client";
+
+import { useState } from "react";
+import { AlignLeftIcon } from "lucide-react";
 
 import MenuLink from "./MenuLink";
 import Logo from "../Reusables/Logo";
+import { _siteDetails } from "@/lib/config";
+import { Navbar } from "./NavBar";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => setIsOpen(!isOpen);
+
   return (
-    <header
-      role="banner"
-      className="flexBetween py-4 pSm bg-white border-b-2 border-gray-200"
-    >
-      <Logo />
-      <div className="flex flex-col">
-        {_siteDetails.menuLinks.map((link, index) => (
-          <MenuLink key={index} {...link} />
-        ))}
-      </div>
-    </header>
+    <>
+      <header className="h-16 pSm py-3 border-b border-primary bg-light w-full flexBetween z-10">
+        <Logo />
+
+        <AlignLeftIcon
+          onClick={toggleOpen}
+          className="text-primary md:hidden"
+          size={28}
+        />
+
+        <div className="w-[16rem] hidden md:flexBetween">
+          {_siteDetails.menuLinks.map((item) => (
+            <MenuLink key={item.link} {...item} />
+          ))}
+        </div>
+
+        {isOpen && <Navbar />}
+      </header>
+    </>
   );
 }

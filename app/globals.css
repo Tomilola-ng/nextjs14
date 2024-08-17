@@ -115,7 +115,7 @@
   }
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
@@ -127,7 +127,7 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #2caa6d;
-}
+} */
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
