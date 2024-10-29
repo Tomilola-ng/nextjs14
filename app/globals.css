@@ -25,109 +25,21 @@
   .pSm {
     @apply px-3 md:px-12;
   }
-  #description h1,
-  #description h2,
-  #description h3,
-  #description h4,
-  #description h5,
-  #description h6 {
-    @apply mt-6 mb-2 text-gray-800;
-  }
-
-  #description h1 {
-    @apply text-xl md:text-2xl;
-  }
-
-  #description h2 {
-    @apply text-lg md:text-xl font-semibold;
-  }
-
-  #description h3 {
-    @apply text-base md:text-lg font-medium;
-  }
-
-  #description h4 {
-    @apply text-base md:text-lg;
-  }
-
-  #description h5 {
-    @apply text-sm;
-  }
-
-  #description h6 {
-    @apply text-xs;
-  }
-
-  #description p {
-    @apply mb-6 text-sm;
-  }
-
-  #description a {
-    @apply text-primary;
-  }
-
-  #description a:hover,
-  #description a:focus {
-    @apply underline;
-  }
-
-  #description ul,
-  #description ol {
-    @apply mb-6 pl-6;
-  }
-
-  #description li {
-    @apply mb-2;
-  }
-
-  #description blockquote {
-    @apply mb-6 p-4 bg-gray-100 border-l-4 border-primary italic text-gray-600;
-  }
-
-  #description blockquote p {
-    @apply m-0;
-  }
-
-  #description code,
-  #description pre {
-    @apply font-mono;
-  }
-
-  #description pre {
-    @apply bg-gray-200 p-4 overflow-x-auto;
-  }
-
-  #description code {
-    @apply bg-gray-200 px-1 py-0.5 rounded;
-  }
-
-  #description table {
-    @apply w-full border-collapse mb-6;
-  }
-
-  #description th,
-  #description td {
-    @apply p-3 border border-gray-300;
-  }
-
-  #description th {
-    @apply bg-gray-100 text-left;
-  }
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2caa6d;
+  background: #0b112b;
   border-radius: 50rem;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2caa6d;
-} */
+  background: #0b112b;
+}
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
@@ -136,4 +48,68 @@
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 231 59% 11%; /* Your brand color #0b112b */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 231 59% 11%; /* Your brand color #0b112b */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
